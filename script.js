@@ -6,7 +6,7 @@ const postsContainer = document.getElementById("postsContainer");
 const loadMoreBtn = document.getElementById("loadMoreBtn");
 
 // Load JSON and render first 5 posts
-fetch("/posts.json")
+fetch("/blog-posts_prototype2/posts.json")
   .then(res => res.json())
   .then(data => {
     allPosts = data;
