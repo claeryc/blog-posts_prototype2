@@ -8,7 +8,7 @@ const filterSelect = document.getElementById("filterSelect");
 
 let activeFilter = "all";
 
-// Load JSON and render first 5 posts
+// Load posts.json
 fetch("/posts.json")
   .then(res => res.json())
   .then(data => {
@@ -45,5 +45,17 @@ function renderPosts() {
   } else {
     loadMoreBtn.style.display = "block";
   }
-  
-loadMoreBtn.addEventListener("click", renderPosts);
+}
+
+// Filter dropdown event
+filterSelect.addEventListener("change", (e) => {
+  activeFilter = e.target.value;
+  currentIndex = 0;
+  postsContainer.innerHTML = "";
+  renderPosts();
+});
+
+// Load more button
+loadMoreBtn.addEventListener("click", () => {
+  renderPosts();
+});
