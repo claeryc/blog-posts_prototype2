@@ -1,0 +1,14 @@
+.post-card { 
+    border: 1px solid #ddd; 
+    padding: 1rem; 
+    margin: 1rem 0; 
+    width: 20%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px 1px rgba(21, 21, 24, 0.2);
+}
+#postsContainer {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    column-gap: 1em;
+}

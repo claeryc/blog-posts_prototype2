@@ -4,13 +4,22 @@
   <meta charset="UTF-8" />
   <title>My Blog</title>
   <style>
-    .post-card { border: 1px solid #ddd; padding: 1rem; margin: 1rem 0; }
+    #postsContainer {display: flex; justify-content: center; align-items: center;}
     .thumbnail { width: 100%; max-width: 300px; }
     #loadMoreBtn { margin: 2rem 0; }
   </style>
+   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1>My Blog</h1>
+
+  <select id="filterSelect">
+    <option value="all">All</option>
+    <option value="programming">Programming</option>
+    <option value="react">React</option>
+    <option value="frontend">Frontend</option>
+  </select>
+
   <div id="postsContainer"></div>
   <button id="loadMoreBtn">Load More</button>
 
